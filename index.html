@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Hokages</title>
+    <script src="plugins/jquery.min.js"></script>
+    <script src="plugins/bxslider.min.js"></script>
+    <link rel="stylesheet" href="plugins/bxslider.css" />
+    <script src="plugins/script.js"></script>
   </head>
   <body>
     <header id="cabecalho">
@@ -47,49 +51,61 @@
       </div>
     </section>
 
-    <section id="conteudo-hokages">
+    <div id="banners">
       <div class="container">
-        <div id="conteudo">
-          <h1>Hokages</h1>
-          <p>
-            Hokage é o título dado ao líder da Vila Oculta da Folha, sendo o
-            cargo mais alto e respeitado dentro da vila. O Hokage é responsável
-            por proteger a vila e seus habitantes, além de tomar decisões
-            importantes para o bem-estar da comunidade ninja.
-          </p>
-          <p>
-            O termo "Hokage" é composto por dois kanjis: "Ho" (火) que significa
-            "fogo" e "Kage" (影) que significa "sombra". Juntos, eles simbolizam
-            a luz e a proteção que o Hokage oferece à vila, assim como a sombra
-            que representa sua vigilância constante.
-          </p>
-        </div>
-        <div id="carrocel">
-          <ul>
-            <li>
-              <img src="" alt="Primeiro Hokage" />
-            </li>
-            <li>
-              <img src="" alt="Segundo Hokage" />
-            </li>
-            <li>
-              <img src="" alt="Terceiro Hokage" />
-            </li>
-            <li>
-              <img src="" alt="Quarto Hokage" />
-            </li>
-            <li>
-              <img src="" alt="Quinto Hokage" />
-            </li>
-            <li>
-              <img src="" alt="Sexto Hokage" />
-            </li>
-            <li>
-              <img src="" alt="Sétimo Hokage" />
-            </li>
-          </ul>
+        <div
+          style="width: 100%; display: flex; flex-direction: column; gap: 32px"
+        >
+          <div id="conteudo">
+            <p>
+              Hokages são os líderes supremos da Vila Oculta da Folha
+              (Konohagakure) no universo de Naruto. Eles são reconhecidos por
+              sua força, sabedoria e dedicação em proteger a vila e seus
+              habitantes, sendo considerados os ninjas mais poderosos e
+              respeitados de Konoha.<br /><br />
+              Ao longo da história, sete ninjas excepcionais ocuparam o posto de
+              Hokage, cada um deixando sua marca única na vila. O título de
+              Hokage não é apenas um símbolo de poder, mas também de
+              responsabilidade, pois cabe a ele tomar decisões importantes,
+              liderar em tempos de guerra e paz, e servir de exemplo para todos
+              os ninjas da vila.<br /><br />
+              Entre os Hokages, destacam-se figuras lendárias como Hashirama
+              Senju, o fundador da vila; Tobirama Senju, criador de várias
+              técnicas e instituições; Hiruzen Sarutobi, o Professor; Minato
+              Namikaze, o Relâmpago Amarelo; Tsunade, a lendária sannin; Kakashi
+              Hatake, o ninja copiador; e Naruto Uzumaki, que realizou o sonho
+              de infância ao conquistar o respeito de todos. O legado dos
+              Hokages é marcado por coragem, sacrifício e um profundo amor por
+              Konoha.
+            </p>
+          </div>
+          <div id="kages">
+            <ul>
+              <li>
+                <img src="images/hokages/hashirama.jpg" alt="Primeiro Hokage" />
+              </li>
+              <li>
+                <img src="images/hokages/tobirama.jpg" alt="Segundo Hokage" />
+              </li>
+              <li>
+                <img src="images/hokages/hiruzen.jpg" alt="Terceiro Hokage" />
+              </li>
+              <li>
+                <img src="images/hokages/minato.jpg" alt="Quarto Hokage" />
+              </li>
+              <li>
+                <img src="images/hokages/tsunade.jpg" alt="Quinto Hokage" />
+              </li>
+              <li>
+                <img src="images/hokages/kakashi.jpg" alt="Sexto Hokage" />
+              </li>
+              <li>
+                <img src="images/hokages/naruto.jpg" alt="Sétimo Hokage" />
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
   </body>
 </html>
