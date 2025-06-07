@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Hokages</title>
+    <link rel="shortcut icon" href="images/favicon_io/favicon.ico" type="image/x-icon" />
     <script src="plugins/jquery.min.js"></script>
     <script src="plugins/bxslider.min.js"></script>
     <link rel="stylesheet" href="css/bxslider.css" />
@@ -18,17 +19,17 @@
           <nav id="menu">
             <ul>
               <li>
-                <a href="index.html"
-                  ><img src="images/Simbolo_konoha_branco.png" alt="teste"
+                <a href=""
+                  ><img id="icone_inicio" src="images/icones/inicio.png" alt="inicio"
                 /></a>
               </li>
-              <li><a href=""><img src="images/Simbolo_konoha_branco.png" alt="teste"
+              <li><a href=""><img id="icone_definicao" src="images/icones/definicao.png" alt="Definição e Hokage"
                 /></a></a></li>
-              <li><a href=""><img src="images/Simbolo_konoha_branco.png" alt="teste"
+              <li><a href=""><img id="icone_selecao" src="images/icones/selecao.png" alt="seleção de personagem"
                 /></a></a></li>
               <li>
                 <a href="https://naruto-official.com/en" target="_blank"
-                  ><img src="images/Simbolo_konoha_branco.png" alt="Site Oficial"
+                  ><img id="icone_oficial" src="images/icones/site oficial.png" alt="Site Oficial"
                 /></a></a
                 >
               </li>
@@ -45,25 +46,25 @@
                 <img src="images/monumento dos hokages.png" alt="Manumento dos Hokages" />
               </li>
               <li>
-                <img src="images/hokages/sem_legenda/hashirama_sem_nome.png" alt="Primeiro Hokage" />
+                <img src="images/hokages/banner/hashirama_sem_nome.png" alt="Primeiro Hokage" />
               </li>
               <li>
-                <img src="images/hokages/sem_legenda/tobirama_sem_nome.png" alt="Segundo Hokage" />
+                <img src="images/hokages/banner/tobirama_sem_nome.png" alt="Segundo Hokage" />
               </li>
               <li>
-                <img src="images/hokages/sem_legenda/hiruzen_sem_nome.png" alt="Terceiro Hokage" />
+                <img src="images/hokages/banner/hiruzen_sem_nome.png" alt="Terceiro Hokage" />
               </li>
               <li>
-                <img src="images/hokages/sem_legenda/minato_sem_nome.png" alt="Quarto Hokage" />
+                <img src="images/hokages/banner/minato_sem_nome.png" alt="Quarto Hokage" />
               </li>
               <li>
-                <img src="images/hokages/sem_legenda/tsunade_sem_nome.png" alt="Quinto Hokage" />
+                <img src="images/hokages/banner/tsunade_sem_nome.png" alt="Quinto Hokage" />
               </li>
               <li>
-                <img src="images/hokages/sem_legenda/kakashi_sem_nome.png" alt="Sexto Hokage" />
+                <img src="images/hokages/banner/kakashi_sem_nome.png" alt="Sexto Hokage" />
               </li>
               <li>
-                <img src="images/hokages/sem_legenda/naruto_sem_nome.png" alt="Sétimo Hokage" />
+                <img src="images/hokages/banner/naruto_sem_nome.png" alt="Sétimo Hokage" />
               </li>
             </ul>
           </div>
@@ -97,43 +98,43 @@
           <ul class="lista-hokages">
             <li>
               <div id="hashirama"><a href="hashirama.html"
-                ><img src="images/hashirama_cortado.png" alt="Primeiro Hokage"
+                ><img src="images/hokages/seletor/hashirama_cortado.png" alt="Primeiro Hokage"
               /></a></div>
               <p>Hashirama Senju</p>
             </li>
             <li>
               <div id="tobirama"><a href="hashirama.html"
-                ><img src="images/tobirama_cortado.png" alt="segundo Hokage"
+                ><img src="images/hokages/seletor/tobirama_cortado.png" alt="segundo Hokage"
               /></a></div>
               <p>Tobirama Senju</p>
             </li>
             <li>
               <div id="hiruzen"><a href="hashirama.html"
-                ><img src="images/hiruzen_cortado.png" alt="Terceiro Hokage"
+                ><img src="images/hokages/seletor/hiruzen_cortado.png" alt="Terceiro Hokage"
               /></a></div>
               <p>Hiruzen Sarutobi</p>
             </li>
             <li>
               <div id="minato"><a href="hashirama.html"
-                ><img src="images/minato_cortado.png" alt="Quarto Hokage"
+                ><img src="images/hokages/seletor/minato_cortado.png" alt="Quarto Hokage"
               /></a></div>
               <p>Minato Namikaze</p>
             </li>
             <li>
               <div id="tsunade"><a href="hashirama.html"
-                ><img src="images/tsunade_cortada.png" alt="Quinto Hokage"
+                ><img src="images/hokages/seletor/tsunade_cortada.png" alt="Quinto Hokage"
               /></a></div>
               <p>Tsunade Senju</p>
             </li>
             <li>
               <div id="kakashi"><a href="hashirama.html"
-                ><img src="images/kakashi_cortado.png" alt="Sexto Hokage"
+                ><img src="images/hokages/seletor/kakashi_cortado.png" alt="Sexto Hokage"
               /></a></div>
               <p>Kakashi Hatake</p>
             </li>
             <li>
               <div id="naruto"><a href="hashirama.html"
-                ><img src="images/naruto_cortado.png" alt="Sétimo Hokage"
+                ><img src="images/hokages/seletor/naruto_cortado.png" alt="Sétimo Hokage"
               /></a></div>
               <p>Naruto Uzumaki</p>
             </li>
@@ -153,5 +154,10 @@
         >
       </span>
     </footer>
+
+    <button id="btn-topo" title="Voltar ao topo">
+      <img src="images/Simbolo_konoha_branco.png" alt="Voltar ao topo" />
+      <span>voltar ao topo</span>
+    </button>
   </body>
 </html>

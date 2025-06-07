@@ -1,3 +1,49 @@
+#btn-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #000;
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    padding: 7px 6px 6px 6px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.18);
+    cursor: pointer;
+    z-index: 9999;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s;
+    width: 70px;
+    min-height: 60px;
+    height: auto;
+}
+#btn-topo img {
+    width: 28px;
+    height: 28px;
+    display: block;
+    margin-bottom: 2px;
+}
+#btn-topo span {
+    font-size: 0.82em;
+    font-family: "Oswald", sans-serif;
+    color: #fff;
+    letter-spacing: 0.5px;
+    text-shadow: 0 1px 4px #000;
+    text-align: center;
+    line-height: 1.1;
+    max-width: 60px;
+    word-break: break-word;
+    white-space: normal;
+    display: block;
+}
+#btn-topo.show {
+    opacity: 1;
+    pointer-events: auto;
+}
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Red+Hat+Display:wght@500;700&display=swap');
 
 * {
@@ -16,21 +62,40 @@
 }
 
 .container {
-    max-width: 1000px; /* Largura máxima do container */
-    margin: 0 auto; /* Centraliza o container na página */
+    max-width: 1000px; 
+    margin: 0 auto; 
 }
 
+
 .inicio #cabecalho {
-    background-color: transparent; /* Cor de fundo do cabeçalho */
+    background-color: transparent;
     position: absolute;
     width: 100%;
     z-index: 2;
+    top: 0;
+    left: 0;
+    transition: background 0.3s, top 0.4s;
+}
 
+#cabecalho.header-visible {
+    background: rgba(0,0,0,0.5) ;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    z-index: 100;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.25);
+    transition: background 0.3s, top 0.4s;
+}
+
+#cabecalho.header-hidden {
+    top: -120px;
+    transition: top 0.4s;
 }
 
 #menu ul {
-    display: flex; /* Alinha os itens do menu em linha */
-    list-style: none; /* Remove os marcadores da lista */
+    display: flex; 
+    list-style: none; 
     width: 100%;
     display: flex;
     justify-content: center;
@@ -38,31 +103,36 @@
 
 #menu ul li a {
     color: var(--cor-04);
-    text-decoration: none; /*tira o sublinhado padrão do navegador */
-    display: block; /* Faz o link ocupar todo o espaço do elemento pai */
-    padding: 20px 30px; /* Insere espaço entre as opções do menu */
-    transition: all .3s linear; /* Transição suave para o hover */
+    text-decoration: none; 
+    display: block; 
+    padding: 20px 30px; 
+    transition: all .3s linear; 
 }
 
 #menu ul li a img{
-    width: 30px; /* Define a largura da imagem do logo */
-    height: 30px; /* Define a altura da imagem do logo */
-    margin-right: 10px; /* Espaço entre a imagem e o texto */
+    width: 70px; 
+    height: auto; 
+    margin-right: 10px; 
+    padding-top: 20px;
+    transition: transform 0.2s, box-shadow 0.2s;
 }
 
-#menu ul li a:hover{
-    color: var(--cor-02); /* muda a cor ao passar o mouse */
+#menu ul li a:hover img,
+#menu ul li a img:hover {
+    transform: scale(1.18);
+    filter: drop-shadow(0 0 8px #fff) drop-shadow(0 0 16px #fff);
+    z-index: 2;
 }
 
 body{
-  max-width: 100%; /* Largura máxima do body */
-  min-height: 100vh; /* Altura mínima do body */
+  max-width: 100%; 
+  min-height: 100vh; 
 }
 
 .inicio{
   width: 100%; 
-  height: 100vh; /* Altura da seção de início */
-  position: relative; /* Necessário para posicionar os elementos internos */
+  height: 100vh; 
+  position: relative; 
   background-color: var(--cor-06);
 }
 
@@ -99,7 +169,7 @@ body{
 
 #banners, #conceito {
   width: 100%;
-  height: 100vh; /* Altura da seção de banners */
+  height: 100vh; 
   display: flex;
   align-items: center;
   margin-top: 0;
@@ -194,8 +264,8 @@ body{
 .box-hokages ul.lista-hokages li div {
   background-color: #FFFF;
   border-radius: 20px;
-  width: 200px; /* Largura do container do Hokage */
-  height: 200px; /* Altura do container do Hokage */
+  width: 200px; 
+  height: 200px; 
   display: flex;
   align-items: baseline;
   overflow: visible;
