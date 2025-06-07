@@ -12,7 +12,7 @@
     --cor-03: #C9C9C9;
     --cor-04: #00A8DE;
     --cor-05: #D2B98E;
-    --cor-06: #FA9427;
+    --cor-06: #ff7540;
 }
 
 .container {
@@ -63,23 +63,24 @@ body{
   width: 100%; 
   height: 100vh; /* Altura da seção de início */
   position: relative; /* Necessário para posicionar os elementos internos */
+  background-color: var(--cor-06);
 }
 
-.inicio div.background-section{
+.inicio .background-section{
   width: 100%;
   height: 100%;
   position: absolute;
   z-index: 0;
 }
 
-.inicio div.background-section img{
+.inicio .background-section #kages ul il img{
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: center;
 }
 
-.inicio div.box{
+.inicio .box{
   width: 40%;
   height: 100%;
   position: relative;
@@ -90,7 +91,7 @@ body{
   justify-content: center;
 }
 
-.inicio div.box img{
+.inicio #box img{
   width: 100%;
   min-width: 300px;
 }
@@ -141,6 +142,7 @@ body{
 
 
 #banners #kages {
+  height: 100vh;
   width: 100%;
   position: relative;
   display: flex;
