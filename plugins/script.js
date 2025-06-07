@@ -95,6 +95,18 @@ $(document).ready(function () {
         }
     );
 
+    $('#icone_historia').click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('#historia').offset().top
+        }, 700);
+    });
+    $('#icone_jutsus').click(function(e) {
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: $('.jutsus').offset().top
+        }, 700);
+    });
 
     $('#icone_voltar').hover(
         function() {
@@ -118,14 +130,6 @@ $(document).ready(function () {
         },
         function() {
             $(this).attr('src', '../images/icones/jutsus.png');
-        }
-    );
-    $('#icone_galeria').hover(
-        function() {
-            $(this).attr('src', '../images/icones/galeria_laranja.png');
-        },
-        function() {
-            $(this).attr('src', '../images/icones/galeria.png');
         }
     );
 
