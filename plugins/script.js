@@ -94,6 +94,41 @@ $(document).ready(function () {
             $(this).attr('src', 'images/icones/site oficial.png');
         }
     );
+
+
+    $('#icone_voltar').hover(
+        function() {
+            $(this).attr('src', '../images/icones/voltar_laranja.png');
+        },
+        function() {
+            $(this).attr('src', '../images/icones/voltar.png');
+        }
+    );
+    $('#icone_historia').hover(
+        function() {
+            $(this).attr('src', '../images/icones/historia_laranja.png');
+        },
+        function() {
+            $(this).attr('src', '../images/icones/historia.png');
+        }
+    );
+    $('#icone_jutsus').hover(
+        function() {
+            $(this).attr('src', '../images/icones/jutsus_laranja.png');
+        },
+        function() {
+            $(this).attr('src', '../images/icones/jutsus.png');
+        }
+    );
+    $('#icone_galeria').hover(
+        function() {
+            $(this).attr('src', '../images/icones/galeria_laranja.png');
+        },
+        function() {
+            $(this).attr('src', '../images/icones/galeria.png');
+        }
+    );
+
      $(".inicio .background-section #banners ul").bxSlider({
          auto: true, 
          speed: 2000, 
