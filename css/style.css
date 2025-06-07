@@ -55,10 +55,12 @@
  :root {
     --cor-01: #000;
     --cor-02: #FE601B;
-    --cor-03: #C9C9C9;
+    --cor-03: #FFFF;
     --cor-04: #00A8DE;
     --cor-05: #D2B98E;
     --cor-06: #ff7540;
+    --hashirama-01: #75383f;
+    --hashirama-02: #373b47;
 }
 
 .container {
@@ -150,6 +152,13 @@ body{
   object-position: center;
 }
 
+.inicio .background-section #kages img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
 .inicio .box{
   width: 40%;
   height: 100%;
@@ -161,13 +170,24 @@ body{
   justify-content: center;
 }
 
-.inicio #box img{
+.inicio .box-hokage{
+  width: 100%;
+  height: 40%;
+  position: relative;
+  z-index: 1;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), transparent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.inicio .box img{
   width: 100%;
   min-width: 300px;
 }
 
 
-#banners, #conceito {
+#banners, #conceito, #historia {
   width: 100%;
   height: 100vh; 
   display: flex;
@@ -310,6 +330,134 @@ body{
   align-items: center;
   justify-content: center;
   text-align: center;
+}
+
+#historia {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--cor-01);
+}
+
+#historia .container {
+  width: 100%;
+  height: 100%;
+  background-color: #414141;
+  border-radius: 50px;
+  border: solid 2px var(--cor-03);
+  padding: 20px;
+
+}
+
+#historia h1 {
+  color: var(--cor-03);
+  text-align: center;
+  font-size: 3em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+#historia .historia-conteudo {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 32px;
+  margin-top: 16px;
+  padding: 20px;
+}
+#historia .historia-conteudo img {
+  width: 200px;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+#historia .historia-conteudo p {
+  color: var(--cor-03);
+  font-size: 1.1em;
+  text-align: justify;
+  margin: 0;
+  columns: 2;
+  line-height: 1.6;
+}
+
+.jutsus{
+  width: 100%;
+  height: auto;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  background-color: var(--hashirama-02);
+}
+
+.jutsus .container {
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  border: solid 2px var(--cor-03);
+  padding: 20px;
+  background-color: var(--hashirama-01);
+}
+
+.jutsus h1 {
+  color: var(--cor-03);
+  text-align: center;
+  font-size: 3em;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: "Red Hat Display", sans-serif;
+}
+
+.jutsus #jutsus-conteudo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  margin-top: 16px;
+  padding: 20px;
+}
+
+.jutsus #jutsus-explicacao{
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.jutsus #jutsus-conteudo img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  border: 2px solid var(--cor-03);
+}
+
+.jutsus #jutsus-conteudo p {
+  color: var(--cor-03);
+  font-size: 1.1em;
+  text-align: center;
+  margin: 0;
+}
+
+.jutsus #jutsus-explicacao .explicacao {
+  font-size: 1.1em;
+  text-align: justify;
+  margin: 0;
+  width: 200px;
+  height: 100%;
+  background-color: var(--hashirama-02);
+  border-radius: 30px;
+  padding: 20px;
+  border: #fff solid 2px;
+}
+
+.jutsus #jutsus-explicacao .explicacao p{
+  margin: 0;
+  font-size: 0.9em;
+  line-height: 1.2;
+  color: var(--cor-03);
+  text-align: justify;
 }
 
 
