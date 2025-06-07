@@ -97,7 +97,7 @@ body{
 }
 
 
-#banners, #conteudo {
+#banners, #conceito {
   width: 100%;
   height: 100vh; /* Altura da seção de banners */
   display: flex;
@@ -106,14 +106,14 @@ body{
   padding-top: 0;
 }
 
-#conteudo .container {
+#conceito .container {
   display: block;
   width: 100%;
   height: 100%;
 
 }
 
-#conteudo {
+#conceito {
   width: 100%;
   position: relative;
   padding-top: 20px;
@@ -121,7 +121,7 @@ body{
   background-color: var(--cor-06);
 }
 
-#conteudo h1 {
+#conceito h1 {
   color: var(--cor-01);
   text-align: center;
   font-size: 5em;
@@ -129,7 +129,7 @@ body{
   font-family: "Red Hat Display", sans-serif;
 }
 
-#conteudo p {
+#conceito p {
   color: var(--cor-01);
    margin: 30px;
     font-size: 1.3em;
