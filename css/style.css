@@ -61,6 +61,8 @@
     --cor-06: #ff7540;
     --hashirama-01: #75383f;
     --hashirama-02: #373b47;
+    --tobirama-01: #1b2a6f; 
+    --tobirama-02: #004d67;
 }
 
 .container {
@@ -344,7 +346,6 @@ body{
 
 #historia .container {
   width: 100%;
-  height: 100%;
   background-color: #414141;
   border-radius: 50px;
   border: solid 2px var(--cor-03);
@@ -368,10 +369,10 @@ body{
   gap: 32px;
   margin-top: 16px;
   padding: 20px;
+  height: 100%;
 }
 #historia .historia-conteudo img {
-  width: 200px;
-  height: auto;
+  height: 400px;
   object-fit: cover;
   object-position: center;
 }
