@@ -1,4 +1,84 @@
 $(document).ready(function () {
+    if ($('#jutsu-modal').length === 0) {
+        var modal = document.createElement('div');
+        modal.id = 'jutsu-modal';
+        modal.style.display = 'none';
+        modal.style.position = 'fixed';
+        modal.style.zIndex = '99999';
+        modal.style.top = '0';
+        modal.style.left = '0';
+        modal.style.width = '100vw';
+        modal.style.height = '100vh';
+        modal.style.background = 'rgba(0,0,0,0.55)';
+        modal.style.justifyContent = 'center';
+        modal.style.alignItems = 'center';
+
+        var closeBtn = document.createElement('span');
+        closeBtn.id = 'jutsu-modal-close';
+        closeBtn.innerHTML = '&times;';
+        closeBtn.style.position = 'absolute';
+        closeBtn.style.top = '32px';
+        closeBtn.style.right = '48px';
+        closeBtn.style.fontSize = '3.2rem';
+        closeBtn.style.fontWeight = 'bold';
+        closeBtn.style.color = '#fff';
+        closeBtn.style.cursor = 'pointer';
+        closeBtn.style.zIndex = '100001';
+        closeBtn.style.userSelect = 'none';
+        closeBtn.style.transition = 'color 0.2s';
+        closeBtn.style.display = 'none';
+
+        var img = document.createElement('img');
+        img.id = 'jutsu-modal-img';
+        img.alt = 'Jutsu';
+        img.style.display = 'none';
+        img.style.maxWidth = '90vw';
+        img.style.maxHeight = '80vh';
+        img.style.borderRadius = '20px';
+        img.style.boxShadow = '0 8px 32px 0 rgba(0,0,0,0.28)';
+        img.style.border = '4px solid #fff';
+
+        modal.appendChild(closeBtn);
+        modal.appendChild(img);
+        document.body.appendChild(modal);
+    }
+
+    $(document).on('click', '.jutsus #jutsus-conteudo img', function() {
+        var src = $(this).attr('src');
+        var $modal = $('#jutsu-modal');
+        var $img = $('#jutsu-modal-img');
+        var $close = $('#jutsu-modal-close');
+        $img.attr('src', src);
+        $img.css('display', 'block');
+        $close.css('display', 'block');
+        $modal.css({ display: 'flex', opacity: 0 });
+        $modal.animate({ opacity: 1 }, 150);
+    });
+
+    $(document).on('click', '#jutsu-modal', function(e) {
+        if (e.target === this) {
+            $('#jutsu-modal').animate({ opacity: 0 }, 150, function() {
+                $('#jutsu-modal-img').css('display', 'none');
+                $('#jutsu-modal-close').css('display', 'none');
+                $('#jutsu-modal').css('display', 'none');
+            });
+        }
+    });
+
+    $(document).on('click', '#jutsu-modal-close', function() {
+        $('#jutsu-modal').animate({ opacity: 0 }, 150, function() {
+            $('#jutsu-modal-img').css('display', 'none');
+            $('#jutsu-modal-close').css('display', 'none');
+            $('#jutsu-modal').css('display', 'none');
+        });
+    });
+
+    $(document).on('mouseenter', '#jutsu-modal-close', function() {
+        $(this).css('color', '#FE601B');
+    });
+    $(document).on('mouseleave', '#jutsu-modal-close', function() {
+        $(this).css('color', '#fff');
+    });
 
     
     const $btnTopo = $('#btn-topo');
